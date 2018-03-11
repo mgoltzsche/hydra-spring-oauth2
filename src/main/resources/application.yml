@@ -1,0 +1,15 @@
+service.name: ssoclient
+security:
+  oauth2:
+    sso:
+      loginPath: /login
+    client:
+      clientId: sampleclient
+      clientSecret: sampleclientsecret
+      accessTokenUri: http://localhost:4444/oauth2/token
+      userAuthorizationUri: http://localhost:4444/oauth2/auth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
